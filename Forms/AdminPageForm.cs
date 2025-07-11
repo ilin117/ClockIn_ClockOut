@@ -279,18 +279,34 @@ namespace ClockIn_ClockOut.Forms
 
         private void buttonChangePass_Click(object sender, EventArgs e)
         {
-            string new_password = Interaction.InputBox("Enter new password", "Password Input", "");
+            string current_pass = Interaction.InputBox("Enter current password to continue", "Password Input", "");
 
-            if (string.IsNullOrEmpty(new_password))
+            if (current_pass == EmployeeSelectForm.password_for_admin)
+            {
+                string new_password = Interaction.InputBox("Enter new password", "Password Input", "");
+                if (string.IsNullOrEmpty(new_password))
+                {
+                    return;
+                }
+                else
+                {
+                    using (StreamWriter sw = new StreamWriter("password.txt"))
+                    {
+                        sw.WriteLine(new_password);
+                    }
+                    EmployeeSelectForm.password_for_admin = new_password;
+                    MessageBox.Show("New password set");
+                }
+            }
+            else if (string.IsNullOrEmpty(current_pass))
             {
                 return;
             }
             else
             {
-                EmployeeSelectForm.password_for_admin = new_password;
-                MessageBox.Show("New password set");
+                MessageBox.Show("Wrong Password");
+                return;
             }
-            
         }
     }
 }

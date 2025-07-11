@@ -15,6 +15,7 @@ namespace ClockIn_ClockOut.Forms
 {
     public partial class EmployeeSelectForm : Form
     {
+        public static string password_for_admin;
         public EmployeeSelectForm()
         {
             InitializeComponent();
@@ -36,6 +37,15 @@ namespace ClockIn_ClockOut.Forms
         {
             BindingList<EmployeeModel> employees = EmployeesDAO.GetAllEmployees();
             EmployeeListBox.DataSource = employees;
+
+            using (StreamReader sr = new StreamReader("password.txt"))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    password_for_admin = line;
+                }
+            }
         }
 
 
@@ -45,9 +55,9 @@ namespace ClockIn_ClockOut.Forms
             EmployeeListBox.DataSource = employees;
         }
 
-        public static string password_for_admin = "Issac";
         private void GotoAdminBtn_Click(object sender, EventArgs e)
         {
+
             string password = "";
             while (password != password_for_admin)
             {

@@ -50,7 +50,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(33, 240);
+            button1.Location = new Point(14, 225);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(79, 28);
@@ -61,7 +61,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(33, 368);
+            button2.Location = new Point(14, 328);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(79, 28);
@@ -73,27 +73,27 @@
             // ClockInLabel
             // 
             ClockInLabel.AutoSize = true;
-            ClockInLabel.Font = new Font("Segoe UI", 9F);
-            ClockInLabel.Location = new Point(21, 218);
+            ClockInLabel.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ClockInLabel.Location = new Point(12, 203);
             ClockInLabel.Name = "ClockInLabel";
-            ClockInLabel.Size = new Size(83, 15);
+            ClockInLabel.Size = new Size(95, 18);
             ClockInLabel.TabIndex = 6;
             ClockInLabel.Text = "Clock In Time:";
             // 
             // ClockOutLabel
             // 
             ClockOutLabel.AutoSize = true;
-            ClockOutLabel.Font = new Font("Segoe UI", 9F);
-            ClockOutLabel.Location = new Point(18, 347);
+            ClockOutLabel.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ClockOutLabel.Location = new Point(14, 304);
             ClockOutLabel.Name = "ClockOutLabel";
-            ClockOutLabel.Size = new Size(93, 15);
+            ClockOutLabel.Size = new Size(106, 18);
             ClockOutLabel.TabIndex = 7;
             ClockOutLabel.Text = "Clock Out Time:";
             // 
             // TipsLabel
             // 
             TipsLabel.AutoSize = true;
-            TipsLabel.Location = new Point(54, 281);
+            TipsLabel.Location = new Point(39, 257);
             TipsLabel.Name = "TipsLabel";
             TipsLabel.Size = new Size(34, 18);
             TipsLabel.TabIndex = 11;
@@ -101,10 +101,10 @@
             // 
             // TipsBox
             // 
-            TipsBox.Location = new Point(31, 302);
+            TipsBox.Location = new Point(16, 278);
             TipsBox.Margin = new Padding(3, 4, 3, 4);
             TipsBox.Name = "TipsBox";
-            TipsBox.Size = new Size(81, 23);
+            TipsBox.Size = new Size(79, 23);
             TipsBox.TabIndex = 12;
             // 
             // NameLabel
@@ -192,7 +192,7 @@
             // ClockInTime
             // 
             ClockInTime.AutoSize = true;
-            ClockInTime.Location = new Point(136, 218);
+            ClockInTime.Location = new Point(135, 203);
             ClockInTime.Name = "ClockInTime";
             ClockInTime.Size = new Size(0, 18);
             ClockInTime.TabIndex = 23;
@@ -200,14 +200,14 @@
             // ClockOutTime
             // 
             ClockOutTime.AutoSize = true;
-            ClockOutTime.Location = new Point(136, 347);
+            ClockOutTime.Location = new Point(135, 304);
             ClockOutTime.Name = "ClockOutTime";
             ClockOutTime.Size = new Size(0, 18);
             ClockOutTime.TabIndex = 24;
             // 
             // BackBtn
             // 
-            BackBtn.Location = new Point(26, 433);
+            BackBtn.Location = new Point(9, 454);
             BackBtn.Margin = new Padding(3, 4, 3, 4);
             BackBtn.Name = "BackBtn";
             BackBtn.Size = new Size(86, 28);
@@ -221,7 +221,7 @@
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(440, 507);
+            ClientSize = new Size(355, 492);
             Controls.Add(BackBtn);
             Controls.Add(ClockOutTime);
             Controls.Add(ClockInTime);

@@ -1,10 +1,15 @@
 ﻿using ClockIn_ClockOut.DAOs;
 using ClockIn_ClockOut.Models;
 using CsvHelper;
+using Microsoft.VisualBasic;
+using MigraDoc.DocumentObjectModel;
+using MigraDoc.DocumentObjectModel.Tables;
+using MigraDoc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -12,10 +17,6 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MigraDoc.DocumentObjectModel;
-using MigraDoc.DocumentObjectModel.Tables;
-using MigraDoc.Rendering;
-using System.Diagnostics;
 
 namespace ClockIn_ClockOut.Forms
 {
@@ -264,7 +265,7 @@ namespace ClockIn_ClockOut.Forms
                 PayrollDAO.deleteSelectedPayrollRecords(payrolls.ToList());
                 TimeRecordsDAO.deleteWithSelectedPayrollRecords(payrolls.ToList());
                 payrolls = PayrollDAO.GetAllPayrolls();
-                
+
                 TimeRecordsFromDate.DataSource = payrolls;
 
                 buttonClear_Click(sender, e);
@@ -274,6 +275,22 @@ namespace ClockIn_ClockOut.Forms
             {
                 return;
             }
+        }
+
+        private void buttonChangePass_Click(object sender, EventArgs e)
+        {
+            string new_password = Interaction.InputBox("Enter new password", "Password Input", "");
+
+            if (string.IsNullOrEmpty(new_password))
+            {
+                return;
+            }
+            else
+            {
+                EmployeeSelectForm.password_for_admin = new_password;
+                MessageBox.Show("New password set");
+            }
+            
         }
     }
 }

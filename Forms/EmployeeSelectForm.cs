@@ -45,10 +45,11 @@ namespace ClockIn_ClockOut.Forms
             EmployeeListBox.DataSource = employees;
         }
 
+        public static string password_for_admin = "Issac";
         private void GotoAdminBtn_Click(object sender, EventArgs e)
         {
             string password = "";
-            while (password != "Issac")
+            while (password != password_for_admin)
             {
                 password = Interaction.InputBox("Enter Password", "Password Input", "");
 
@@ -57,7 +58,7 @@ namespace ClockIn_ClockOut.Forms
                     return;
                 }
 
-                if (password == "Issac")
+                if (password == password_for_admin)
                 {
                     this.Hide();
                     var form = new AdminPageForm();

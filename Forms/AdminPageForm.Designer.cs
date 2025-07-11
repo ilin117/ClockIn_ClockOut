@@ -46,6 +46,7 @@
             textBoxEmployeeId = new TextBox();
             buttonClear = new Button();
             buttonDelete = new Button();
+            buttonChangePass = new Button();
             SuspendLayout();
             // 
             // StartDatePicker
@@ -230,12 +231,23 @@
             buttonDelete.UseVisualStyleBackColor = true;
             buttonDelete.Click += buttonDelete_Click;
             // 
+            // buttonChangePass
+            // 
+            buttonChangePass.Location = new Point(721, 78);
+            buttonChangePass.Name = "buttonChangePass";
+            buttonChangePass.Size = new Size(137, 28);
+            buttonChangePass.TabIndex = 28;
+            buttonChangePass.Text = "Change Password";
+            buttonChangePass.UseVisualStyleBackColor = true;
+            buttonChangePass.Click += buttonChangePass_Click;
+            // 
             // AdminPageForm
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(913, 514);
+            Controls.Add(buttonChangePass);
             Controls.Add(buttonDelete);
             Controls.Add(buttonClear);
             Controls.Add(textBoxEmployeeId);
@@ -284,5 +296,6 @@
         private TextBox textBoxEmployeeId;
         private Button buttonClear;
         private Button buttonDelete;
+        private Button buttonChangePass;
     }
 }

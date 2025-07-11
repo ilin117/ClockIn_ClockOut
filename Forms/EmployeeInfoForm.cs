@@ -1,8 +1,6 @@
 using ClockIn_ClockOut.DAOs;
 using ClockIn_ClockOut.Forms;
 using ClockIn_ClockOut.Models;
-using System.Data.SQLite;
-using System.Runtime.CompilerServices;
 
 namespace ClockIn_ClockOut
 {
@@ -36,9 +34,9 @@ namespace ClockIn_ClockOut
                 ClockInTime.Text = time_record.Start_Time.ToString();
                 TimeRecordsDAO.ClockIn(time_record);
                 MessageBox.Show("Good luck with your shift!");
-                this.Hide();
+                Hide();
                 EmployeeSelectForm employeeInfoForm = new EmployeeSelectForm();
-                employeeInfoForm.Closed += (s, args) => this.Close();
+                employeeInfoForm.Closed += (s, args) => Close();
                 employeeInfoForm.Show();
                 return;
             }
@@ -72,9 +70,9 @@ namespace ClockIn_ClockOut
                 MessageBox.Show($"Total: {Math.Round(duration.TotalHours, 2)} hrs, ${time_record.Tips} tips, ${Math.Round(employee.Pay_Per_Hour * time_record.Hours_Worked + time_record.Tips, 2)} earned", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TimeRecordsDAO.ClockOut(time_record);
                 PayrollDAO.insertIntoPayroll(time_record, employee);
-                this.Hide();
+                Hide();
                 EmployeeSelectForm employeeInfoForm = new EmployeeSelectForm();
-                employeeInfoForm.Closed += (s, args) => this.Close();
+                employeeInfoForm.Closed += (s, args) => Close();
                 employeeInfoForm.Show();
             }
         }
@@ -98,9 +96,9 @@ namespace ClockIn_ClockOut
 
         private void BackBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             var form = new EmployeeSelectForm();
-            form.Closed += (s, args) => this.Close();
+            form.Closed += (s, args) => Close();
             form.Show();
         }
     }

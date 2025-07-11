@@ -38,23 +38,9 @@ namespace ClockIn_ClockOut.DAOs
             using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
             {
                 connection.Execute("update Time_Records set End_Time = @End_Time, Hours_Worked = @Hours_Worked, Tips = @Tips where Employee_Id = @Employee_Id and Start_Time = @Start_Time", time_record);
+                connection.Execute("delete from Time_Records where End_Time = @End_Time and Hours_Worked = @Hours_Worked and Tips = @Tips and Employee_Id = @Employee_Id and Start_Time = @Start_Time", time_record);
             }
         }
-
-        public static void deleteWithSelectedPayrollRecords(List<PayrollModel> payrolls)
-        {
-            using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
-            {
-                foreach (var payroll in payrolls)
-                {
-                    connection.Execute(
-                        "delete from Time_Records where Employee_Id = @Employee_Id and DATE(Start_Time) = DATE(@Day)",
-                        new { payroll.Employee_Id, payroll.Day }
-                    );
-                }
-            }
-        }
-
 
         private static string LoadConnectionString(string id = "Default")
         {

@@ -19,6 +19,24 @@ namespace ClockIn_ClockOut.DAOs
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
         }
 
+        public static BindingList<EmployeeModel> GetAllClockedInEmployees()
+        {
+            using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = connection.Query<EmployeeModel>("select * from Employees where Employee_Id in (select Employee_Id from Time_Records where End_Time is null)", new DynamicParameters()).ToList();
+                return new BindingList<EmployeeModel>(output.ToList());
+            }
+        }
+
+        public static BindingList<EmployeeModel> GetAllNotWorkingEmployees()
+        {
+            using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
+            {
+                var output = connection.Query<EmployeeModel>("select * from Employees where Employee_Id not in (select Employee_Id from Time_Records where End_Time is null)", new DynamicParameters()).ToList();
+                return new BindingList<EmployeeModel>(output.ToList());
+            }
+        }
+
         public static BindingList<EmployeeModel> GetAllEmployees()
         {
             using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))

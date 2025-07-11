@@ -263,7 +263,6 @@ namespace ClockIn_ClockOut.Forms
             if (dialogResult == DialogResult.Yes)
             {
                 PayrollDAO.deleteSelectedPayrollRecords(payrolls.ToList());
-                TimeRecordsDAO.deleteWithSelectedPayrollRecords(payrolls.ToList());
                 payrolls = PayrollDAO.GetAllPayrolls();
 
                 TimeRecordsFromDate.DataSource = payrolls;

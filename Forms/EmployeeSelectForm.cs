@@ -16,6 +16,8 @@ namespace ClockIn_ClockOut.Forms
     public partial class EmployeeSelectForm : Form
     {
         public static string password_for_admin;
+        private BindingList<EmployeeModel> not_working_employees;
+        private BindingList<EmployeeModel> clocked_in_employees;
         public EmployeeSelectForm()
         {
             InitializeComponent();
@@ -31,12 +33,24 @@ namespace ClockIn_ClockOut.Forms
                 form.Closed += (s, args) => this.Close();
                 form.Show();
             }
+            if (listBoxClockIn.SelectedItem != null)
+            {
+                EmployeeModel employee = (EmployeeModel)listBoxClockIn.SelectedItem;
+                this.Hide();
+                var form = new EmployeeInfoForm(employee);
+                form.Closed += (s, args) => this.Close();
+                form.Show();
+            }
         }
 
         private void EmployeeSelectForm_Load(object sender, EventArgs e)
         {
-            BindingList<EmployeeModel> employees = EmployeesDAO.GetAllEmployees();
-            EmployeeListBox.DataSource = employees;
+            clocked_in_employees = EmployeesDAO.GetAllClockedInEmployees();
+            not_working_employees = EmployeesDAO.GetAllNotWorkingEmployees();
+            listBoxClockIn.DataSource = clocked_in_employees;
+            EmployeeListBox.DataSource = not_working_employees;
+            listBoxClockIn.ClearSelected();
+            EmployeeListBox.ClearSelected();
 
             using (StreamReader sr = new StreamReader("password.txt"))
             {
@@ -46,13 +60,6 @@ namespace ClockIn_ClockOut.Forms
                     password_for_admin = line;
                 }
             }
-        }
-
-
-        private void RefreshBtn_Click(object sender, EventArgs e)
-        {
-            BindingList<EmployeeModel> employees = EmployeesDAO.GetAllEmployees();
-            EmployeeListBox.DataSource = employees;
         }
 
         private void GotoAdminBtn_Click(object sender, EventArgs e)

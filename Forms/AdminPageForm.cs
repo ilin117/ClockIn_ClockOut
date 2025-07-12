@@ -37,9 +37,11 @@ namespace ClockIn_ClockOut.Forms
             textBoxPosition.Enabled = false;
             FilterBtn.Enabled = false;
 
+
             checkBoxEmployeeId.Tag = textBoxEmployeeId;
             checkBoxName.Tag = textBoxName;
             checkBoxPosition.Tag = textBoxPosition;
+            TimeRecordsFromDate.ClearSelected();
 
             payrolls = PayrollDAO.GetAllPayrolls();
             TimeRecordsFromDate.DataSource = payrolls;

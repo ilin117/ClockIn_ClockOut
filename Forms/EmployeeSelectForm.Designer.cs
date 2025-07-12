@@ -49,7 +49,7 @@
             // 
             // GoToAdminBtn
             // 
-            GoToAdminBtn.Location = new Point(12, 24);
+            GoToAdminBtn.Location = new Point(549, 37);
             GoToAdminBtn.Name = "GoToAdminBtn";
             GoToAdminBtn.Size = new Size(102, 26);
             GoToAdminBtn.TabIndex = 4;
@@ -61,7 +61,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Inter", 10F);
-            label1.Location = new Point(12, 53);
+            label1.Location = new Point(12, 37);
             label1.Name = "label1";
             label1.Size = new Size(223, 21);
             label1.TabIndex = 5;
@@ -81,20 +81,20 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Inter", 10F, FontStyle.Bold);
+            label2.Font = new Font("Inter", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(345, 88);
             label2.Name = "label2";
-            label2.Size = new Size(82, 21);
+            label2.Size = new Size(77, 18);
             label2.TabIndex = 7;
             label2.Text = "Clocked in";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Inter", 10F, FontStyle.Bold);
+            label3.Font = new Font("Inter", 9.75F, FontStyle.Bold);
             label3.Location = new Point(12, 88);
             label3.Name = "label3";
-            label3.Size = new Size(95, 21);
+            label3.Size = new Size(86, 18);
             label3.TabIndex = 8;
             label3.Text = "Not working";
             // 

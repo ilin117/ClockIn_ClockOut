@@ -29,7 +29,7 @@ namespace ClockIn_ClockOut.Forms
             {
                 EmployeeModel employee = (EmployeeModel)EmployeeListBox.SelectedItem;
                 this.Hide();
-                var form = new EmployeeInfoForm(employee);
+                var form = new ClockInClockOutForm(employee);
                 form.Closed += (s, args) => this.Close();
                 form.Show();
             }
@@ -37,7 +37,7 @@ namespace ClockIn_ClockOut.Forms
             {
                 EmployeeModel employee = (EmployeeModel)listBoxClockIn.SelectedItem;
                 this.Hide();
-                var form = new EmployeeInfoForm(employee);
+                var form = new ClockInClockOutForm(employee);
                 form.Closed += (s, args) => this.Close();
                 form.Show();
             }

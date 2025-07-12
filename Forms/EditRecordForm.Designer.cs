@@ -44,6 +44,7 @@
             positionBox = new TextBox();
             tipsBox = new TextBox();
             hoursBox = new TextBox();
+            buttonDel = new Button();
             SuspendLayout();
             // 
             // BackBtn
@@ -187,12 +188,24 @@
             hoursBox.Size = new Size(176, 23);
             hoursBox.TabIndex = 5;
             // 
+            // buttonDel
+            // 
+            buttonDel.Location = new Point(326, 380);
+            buttonDel.Margin = new Padding(3, 4, 3, 4);
+            buttonDel.Name = "buttonDel";
+            buttonDel.Size = new Size(86, 28);
+            buttonDel.TabIndex = 10;
+            buttonDel.Text = "Delete";
+            buttonDel.UseVisualStyleBackColor = true;
+            buttonDel.Click += deleteBtn_Click;
+            // 
             // ViewRecordForm
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(207, 428);
+            ClientSize = new Size(424, 428);
+            Controls.Add(buttonDel);
             Controls.Add(hoursBox);
             Controls.Add(tipsBox);
             Controls.Add(positionBox);
@@ -237,5 +250,6 @@
         private TextBox positionBox;
         private TextBox tipsBox;
         private TextBox hoursBox;
+        private Button buttonDel;
     }
 }

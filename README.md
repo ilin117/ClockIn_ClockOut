@@ -5,4 +5,4 @@ please go to <a href="https://github.com/ilin117/ClockIn_ClockOut/releases/tag/v
 and follow the instructions.</p>
 
 <h1>Demo</h1>
-<p>Here is a <a href="https://youtu.be/gQOtDcVuNRk">link</a> to a video showcasing the app. Enjoy!</p>
+<p>Here is a <a href="https://youtu.be/gQOtDcVuNRk" target="_blank">link</a> to a video showcasing the app. Enjoy!</p>

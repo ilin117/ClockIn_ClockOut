@@ -52,7 +52,7 @@
             // 
             // PositionNameBox
             // 
-            PositionNameBox.Location = new Point(153, 80);
+            PositionNameBox.Location = new Point(426, 31);
             PositionNameBox.Margin = new Padding(3, 4, 3, 4);
             PositionNameBox.Name = "PositionNameBox";
             PositionNameBox.Size = new Size(132, 23);
@@ -61,7 +61,7 @@
             // PositionNameLabel
             // 
             PositionNameLabel.AutoSize = true;
-            PositionNameLabel.Location = new Point(153, 58);
+            PositionNameLabel.Location = new Point(426, 9);
             PositionNameLabel.Name = "PositionNameLabel";
             PositionNameLabel.Size = new Size(57, 18);
             PositionNameLabel.TabIndex = 1;
@@ -70,7 +70,7 @@
             // PayLabel
             // 
             PayLabel.AutoSize = true;
-            PayLabel.Location = new Point(15, 107);
+            PayLabel.Location = new Point(412, 62);
             PayLabel.Name = "PayLabel";
             PayLabel.Size = new Size(90, 18);
             PayLabel.TabIndex = 3;
@@ -78,15 +78,15 @@
             // 
             // PayBox
             // 
-            PayBox.Location = new Point(15, 129);
+            PayBox.Location = new Point(412, 84);
             PayBox.Margin = new Padding(3, 4, 3, 4);
             PayBox.Name = "PayBox";
-            PayBox.Size = new Size(133, 23);
-            PayBox.TabIndex = 5;
+            PayBox.Size = new Size(146, 23);
+            PayBox.TabIndex = 7;
             // 
             // EmployeeSubmitBtn
             // 
-            EmployeeSubmitBtn.Location = new Point(202, 272);
+            EmployeeSubmitBtn.Location = new Point(472, 186);
             EmployeeSubmitBtn.Margin = new Padding(3, 4, 3, 4);
             EmployeeSubmitBtn.Name = "EmployeeSubmitBtn";
             EmployeeSubmitBtn.Size = new Size(86, 28);
@@ -98,7 +98,7 @@
             // LastNameLabel
             // 
             LastNameLabel.AutoSize = true;
-            LastNameLabel.Location = new Point(153, 9);
+            LastNameLabel.Location = new Point(288, 9);
             LastNameLabel.Name = "LastNameLabel";
             LastNameLabel.Size = new Size(73, 18);
             LastNameLabel.TabIndex = 20;
@@ -107,16 +107,16 @@
             // LastNameBox
             // 
             LastNameBox.BackColor = SystemColors.Window;
-            LastNameBox.Location = new Point(153, 31);
+            LastNameBox.Location = new Point(288, 31);
             LastNameBox.Margin = new Padding(3, 4, 3, 4);
             LastNameBox.Name = "LastNameBox";
             LastNameBox.Size = new Size(132, 23);
-            LastNameBox.TabIndex = 2;
+            LastNameBox.TabIndex = 3;
             // 
             // FirstNameLabel
             // 
             FirstNameLabel.AutoSize = true;
-            FirstNameLabel.Location = new Point(15, 9);
+            FirstNameLabel.Location = new Point(150, 9);
             FirstNameLabel.Name = "FirstNameLabel";
             FirstNameLabel.Size = new Size(75, 18);
             FirstNameLabel.TabIndex = 18;
@@ -125,7 +125,7 @@
             // EmployeeIdLabel
             // 
             EmployeeIdLabel.AutoSize = true;
-            EmployeeIdLabel.Location = new Point(12, 58);
+            EmployeeIdLabel.Location = new Point(9, 9);
             EmployeeIdLabel.Name = "EmployeeIdLabel";
             EmployeeIdLabel.Size = new Size(84, 18);
             EmployeeIdLabel.TabIndex = 17;
@@ -134,23 +134,23 @@
             // FirstNameBox
             // 
             FirstNameBox.BackColor = SystemColors.Window;
-            FirstNameBox.Location = new Point(15, 31);
+            FirstNameBox.Location = new Point(150, 31);
             FirstNameBox.Margin = new Padding(3, 4, 3, 4);
             FirstNameBox.Name = "FirstNameBox";
             FirstNameBox.Size = new Size(132, 23);
-            FirstNameBox.TabIndex = 1;
+            FirstNameBox.TabIndex = 2;
             // 
             // EmployeeIdBox
             // 
-            EmployeeIdBox.Location = new Point(15, 80);
+            EmployeeIdBox.Location = new Point(12, 31);
             EmployeeIdBox.Margin = new Padding(3, 4, 3, 4);
             EmployeeIdBox.Name = "EmployeeIdBox";
             EmployeeIdBox.Size = new Size(132, 23);
-            EmployeeIdBox.TabIndex = 3;
+            EmployeeIdBox.TabIndex = 1;
             // 
             // BackBtn
             // 
-            BackBtn.Location = new Point(15, 272);
+            BackBtn.Location = new Point(12, 186);
             BackBtn.Margin = new Padding(3, 4, 3, 4);
             BackBtn.Name = "BackBtn";
             BackBtn.Size = new Size(86, 28);
@@ -162,7 +162,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(152, 107);
+            label1.Location = new Point(12, 111);
             label1.Name = "label1";
             label1.Size = new Size(60, 18);
             label1.TabIndex = 25;
@@ -170,16 +170,16 @@
             // 
             // textBoxAddress
             // 
-            textBoxAddress.Location = new Point(152, 129);
+            textBoxAddress.Location = new Point(12, 133);
             textBoxAddress.Margin = new Padding(3, 4, 3, 4);
             textBoxAddress.Name = "textBoxAddress";
-            textBoxAddress.Size = new Size(133, 23);
-            textBoxAddress.TabIndex = 6;
+            textBoxAddress.Size = new Size(369, 23);
+            textBoxAddress.TabIndex = 8;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(15, 206);
+            label2.Location = new Point(398, 111);
             label2.Name = "label2";
             label2.Size = new Size(34, 18);
             label2.TabIndex = 27;
@@ -187,16 +187,16 @@
             // 
             // textBoxSSN
             // 
-            textBoxSSN.Location = new Point(16, 228);
+            textBoxSSN.Location = new Point(399, 133);
             textBoxSSN.Margin = new Padding(3, 4, 3, 4);
             textBoxSSN.Name = "textBoxSSN";
-            textBoxSSN.Size = new Size(132, 23);
-            textBoxSSN.TabIndex = 9;
+            textBoxSSN.Size = new Size(159, 23);
+            textBoxSSN.TabIndex = 10;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(152, 156);
+            label3.Location = new Point(10, 61);
             label3.Name = "label3";
             label3.Size = new Size(40, 18);
             label3.TabIndex = 29;
@@ -204,16 +204,16 @@
             // 
             // textBoxEmail
             // 
-            textBoxEmail.Location = new Point(154, 178);
+            textBoxEmail.Location = new Point(12, 83);
             textBoxEmail.Margin = new Padding(3, 4, 3, 4);
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(131, 23);
-            textBoxEmail.TabIndex = 8;
+            textBoxEmail.Size = new Size(213, 23);
+            textBoxEmail.TabIndex = 5;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(15, 156);
+            label4.Location = new Point(231, 61);
             label4.Name = "label4";
             label4.Size = new Size(102, 18);
             label4.TabIndex = 31;
@@ -221,18 +221,18 @@
             // 
             // textBoxPhone
             // 
-            textBoxPhone.Location = new Point(15, 178);
+            textBoxPhone.Location = new Point(231, 83);
             textBoxPhone.Margin = new Padding(3, 4, 3, 4);
             textBoxPhone.Name = "textBoxPhone";
-            textBoxPhone.Size = new Size(132, 23);
-            textBoxPhone.TabIndex = 7;
+            textBoxPhone.Size = new Size(175, 23);
+            textBoxPhone.TabIndex = 6;
             // 
             // AddEmployeeForm
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(299, 322);
+            ClientSize = new Size(582, 235);
             Controls.Add(label4);
             Controls.Add(textBoxPhone);
             Controls.Add(label3);

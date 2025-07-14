@@ -63,7 +63,7 @@ namespace ClockIn_ClockOut.DAOs
                                     First_Name = @First_Name,
                                     Last_Name = @Last_Name,
                                     Position = @Position,
-                                    Pay_Per_Hour = @Pay_Per_Hour.
+                                    Pay_Per_Hour = @Pay_Per_Hour,
                                     Address = @Address,
                                     Phone_Number = @Phone_Number,
                                     Email = @Email,

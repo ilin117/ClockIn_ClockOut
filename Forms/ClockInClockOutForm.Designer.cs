@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
+            buttonClockIn = new Button();
+            buttonClockOut = new Button();
             ClockInLabel = new Label();
             ClockOutLabel = new Label();
             TipsLabel = new Label();
@@ -46,33 +46,33 @@
             BackBtn = new Button();
             SuspendLayout();
             // 
-            // button1
+            // buttonClockIn
             // 
-            button1.Location = new Point(14, 189);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(79, 28);
-            button1.TabIndex = 0;
-            button1.Text = "Clock In";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += ClockInButtonClick;
+            buttonClockIn.Location = new Point(12, 182);
+            buttonClockIn.Margin = new Padding(3, 4, 3, 4);
+            buttonClockIn.Name = "buttonClockIn";
+            buttonClockIn.Size = new Size(79, 28);
+            buttonClockIn.TabIndex = 0;
+            buttonClockIn.Text = "Clock In";
+            buttonClockIn.UseVisualStyleBackColor = true;
+            buttonClockIn.Click += ClockInButtonClick;
             // 
-            // button2
+            // buttonClockOut
             // 
-            button2.Location = new Point(14, 292);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(79, 28);
-            button2.TabIndex = 5;
-            button2.Text = "Clock Out";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += ClockOutButtonClick;
+            buttonClockOut.Location = new Point(12, 308);
+            buttonClockOut.Margin = new Padding(3, 4, 3, 4);
+            buttonClockOut.Name = "buttonClockOut";
+            buttonClockOut.Size = new Size(79, 28);
+            buttonClockOut.TabIndex = 5;
+            buttonClockOut.Text = "Clock Out";
+            buttonClockOut.UseVisualStyleBackColor = true;
+            buttonClockOut.Click += ClockOutButtonClick;
             // 
             // ClockInLabel
             // 
             ClockInLabel.AutoSize = true;
             ClockInLabel.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ClockInLabel.Location = new Point(12, 167);
+            ClockInLabel.Location = new Point(10, 160);
             ClockInLabel.Name = "ClockInLabel";
             ClockInLabel.Size = new Size(95, 18);
             ClockInLabel.TabIndex = 6;
@@ -82,7 +82,7 @@
             // 
             ClockOutLabel.AutoSize = true;
             ClockOutLabel.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ClockOutLabel.Location = new Point(14, 268);
+            ClockOutLabel.Location = new Point(10, 286);
             ClockOutLabel.Name = "ClockOutLabel";
             ClockOutLabel.Size = new Size(106, 18);
             ClockOutLabel.TabIndex = 7;
@@ -91,7 +91,7 @@
             // TipsLabel
             // 
             TipsLabel.AutoSize = true;
-            TipsLabel.Location = new Point(37, 220);
+            TipsLabel.Location = new Point(36, 227);
             TipsLabel.Name = "TipsLabel";
             TipsLabel.Size = new Size(34, 18);
             TipsLabel.TabIndex = 11;
@@ -99,11 +99,11 @@
             // 
             // TipsBox
             // 
-            TipsBox.Location = new Point(14, 241);
+            TipsBox.Location = new Point(12, 249);
             TipsBox.Margin = new Padding(3, 4, 3, 4);
             TipsBox.Name = "TipsBox";
             TipsBox.Size = new Size(79, 23);
-            TipsBox.TabIndex = 12;
+            TipsBox.TabIndex = 1;
             // 
             // NameLabel
             // 
@@ -118,7 +118,7 @@
             // 
             HeadingLabel.AutoSize = true;
             HeadingLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            HeadingLabel.Location = new Point(14, 11);
+            HeadingLabel.Location = new Point(12, 9);
             HeadingLabel.Name = "HeadingLabel";
             HeadingLabel.Size = new Size(218, 30);
             HeadingLabel.TabIndex = 14;
@@ -172,7 +172,7 @@
             // ClockInTime
             // 
             ClockInTime.AutoSize = true;
-            ClockInTime.Location = new Point(126, 167);
+            ClockInTime.Location = new Point(105, 160);
             ClockInTime.Name = "ClockInTime";
             ClockInTime.Size = new Size(0, 18);
             ClockInTime.TabIndex = 23;
@@ -180,14 +180,14 @@
             // ClockOutTime
             // 
             ClockOutTime.AutoSize = true;
-            ClockOutTime.Location = new Point(126, 268);
+            ClockOutTime.Location = new Point(122, 286);
             ClockOutTime.Name = "ClockOutTime";
             ClockOutTime.Size = new Size(0, 18);
             ClockOutTime.TabIndex = 24;
             // 
             // BackBtn
             // 
-            BackBtn.Location = new Point(7, 424);
+            BackBtn.Location = new Point(12, 377);
             BackBtn.Margin = new Padding(3, 4, 3, 4);
             BackBtn.Name = "BackBtn";
             BackBtn.Size = new Size(86, 28);
@@ -201,7 +201,7 @@
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(355, 465);
+            ClientSize = new Size(327, 415);
             Controls.Add(BackBtn);
             Controls.Add(ClockOutTime);
             Controls.Add(ClockInTime);
@@ -216,8 +216,8 @@
             Controls.Add(TipsLabel);
             Controls.Add(ClockOutLabel);
             Controls.Add(ClockInLabel);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(buttonClockOut);
+            Controls.Add(buttonClockIn);
             Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
             Name = "ClockInClockOutForm";
@@ -230,8 +230,8 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
+        private Button buttonClockIn;
+        private Button buttonClockOut;
         private Label ClockInLabel;
         private Label ClockOutLabel;
         private Label TipsLabel;

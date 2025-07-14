@@ -29,9 +29,9 @@ namespace ClockIn_ClockOut
             }
             else
             {
-
                 time_record = new TimeRecordModel(DateTime.Now, employee.Employee_Id);
                 ClockInTime.Text = time_record.Start_Time.ToString();
+                buttonClockIn.Visible = false;
                 TimeRecordsDAO.ClockIn(time_record);
                 MessageBox.Show("Good luck with your shift!");
                 Hide();
@@ -67,7 +67,8 @@ namespace ClockIn_ClockOut
                 TimeSpan duration = time_record.End_Time - time_record.Start_Time;
                 time_record.Hours_Worked = duration.TotalHours;
                 TipsBox.Clear();
-                MessageBox.Show($"Total: {Math.Round(duration.TotalHours, 2)} hrs, ${time_record.Tips} tips, ${Math.Round(employee.Pay_Per_Hour * time_record.Hours_Worked + time_record.Tips, 2)} earned", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                buttonClockOut.Visible = false;
+                MessageBox.Show($"Total: {Math.Round(duration.TotalHours, 2)} hrs, ${time_record.Tips} tips", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TimeRecordsDAO.ClockOut(time_record);
                 PayrollDAO.insertIntoPayroll(time_record, employee);
                 Hide();
@@ -84,6 +85,7 @@ namespace ClockIn_ClockOut
                 time_record = TimeRecordsDAO.GetTimeRecordModel(employee.Employee_Id);
                 TipsLabel.Visible = false;
                 TipsBox.Visible = false;
+                buttonClockOut.Visible = false;
             }
 
             if (time_record != null && time_record.Start_Time != default)
@@ -91,6 +93,8 @@ namespace ClockIn_ClockOut
                 ClockInTime.Text = time_record.Start_Time.ToString();
                 TipsLabel.Visible = true;
                 TipsBox.Visible = true;
+                buttonClockOut.Visible = true;
+                buttonClockIn.Visible = false;
 
             }
             EmployeeFullName.Text = $"{employee.First_Name} {employee.Last_Name}";

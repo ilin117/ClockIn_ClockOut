@@ -216,7 +216,7 @@
             buttonClear.Location = new Point(12, 144);
             buttonClear.Name = "buttonClear";
             buttonClear.Size = new Size(86, 28);
-            buttonClear.TabIndex = 26;
+            buttonClear.TabIndex = 1;
             buttonClear.Text = "Clear";
             buttonClear.UseVisualStyleBackColor = true;
             buttonClear.Click += buttonClear_Click;

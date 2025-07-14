@@ -79,6 +79,10 @@ namespace ClockIn_ClockOut.Forms
             employee.Last_Name = AddEmployeeForm.CapitalizeFirstLetter(textBoxLastName.Text);
             employee.Position = AddEmployeeForm.CapitalizeFirstLetter(textBoxPosition.Text);
             employee.Pay_Per_Hour = double.Parse(textBoxPay.Text);
+            employee.Email = textBoxEmail.Text;
+            employee.Address = AddEmployeeForm.CapitalizeFirstLetter(textBoxAddress.Text);
+            employee.SSN = textBoxSSN.Text;
+            employee.Phone_Number = textBoxPhone.Text;
 
             try
             {

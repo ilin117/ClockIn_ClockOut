@@ -50,7 +50,7 @@ namespace ClockIn_ClockOut.DAOs
         {
             using (IDbConnection connection = new SQLiteConnection(LoadConnectionString()))
             {
-                connection.Execute("insert into Employees (Employee_Id, First_Name, Last_Name, Position, Pay_Per_Hour) values (@Employee_Id, @First_Name, @Last_Name, @Position, @Pay_Per_Hour)", employee);
+                connection.Execute("insert into Employees (Employee_Id, First_Name, Last_Name, Position, Pay_Per_Hour, Address, Email, Phone_Number, SSN) values (@Employee_Id, @First_Name, @Last_Name, @Position, @Pay_Per_Hour, @Address, @Email, @Phone_Number, @SSN)", employee);
             }
         }
 
@@ -63,7 +63,11 @@ namespace ClockIn_ClockOut.DAOs
                                     First_Name = @First_Name,
                                     Last_Name = @Last_Name,
                                     Position = @Position,
-                                    Pay_Per_Hour = @Pay_Per_Hour
+                                    Pay_Per_Hour = @Pay_Per_Hour.
+                                    Address = @Address,
+                                    Phone_Number = @Phone_Number,
+                                    Email = @Email,
+                                    SSN = @SSN
                                     where id = @Id", employee);
             }
         }

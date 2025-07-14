@@ -28,14 +28,18 @@ namespace ClockIn_ClockOut
             string last_name = CapitalizeFirstLetter(LastNameBox.Text);
             string position = CapitalizeFirstLetter(PositionNameBox.Text);
             double pay;
+            string address = CapitalizeFirstLetter(textBoxAddress.Text);
+            string phone = textBoxPhone.Text;
+            string email = textBoxEmail.Text;
+            string ssn = textBoxSSN.Text;
 
 
-            
-            if (!int.TryParse(EmployeeIdBox.Text, out employee_id) || !double.TryParse(PayBox.Text, out pay) || string.IsNullOrEmpty(first_name) || string.IsNullOrEmpty(last_name) || string.IsNullOrEmpty(position))
+
+            if (!int.TryParse(EmployeeIdBox.Text, out employee_id) || !double.TryParse(PayBox.Text, out pay) || string.IsNullOrEmpty(first_name) || string.IsNullOrEmpty(last_name) || string.IsNullOrEmpty(position) || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(ssn) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(phone))
             {
                 string errorMessage = "";
 
-                if (EmployeeIdBox.Text == "" || PayBox.Text == "" || string.IsNullOrEmpty(first_name) || string.IsNullOrEmpty(last_name) || string.IsNullOrEmpty(position))
+                if (EmployeeIdBox.Text == "" || PayBox.Text == "" || string.IsNullOrEmpty(first_name) || string.IsNullOrEmpty(last_name) || string.IsNullOrEmpty(position) || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(ssn) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(phone))
                 {
                     errorMessage += "Fields cannot be empty\n";
                 }
@@ -54,7 +58,7 @@ namespace ClockIn_ClockOut
                 return;
             }
 
-            EmployeeModel employee = new EmployeeModel(employee_id, first_name, last_name, position, pay);
+            EmployeeModel employee = new EmployeeModel(employee_id, first_name, last_name, position, pay, address, phone, email, ssn);
             try
             {
                 EmployeesDAO.InsertEmployee(employee);

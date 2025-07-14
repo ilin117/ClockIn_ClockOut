@@ -82,15 +82,19 @@ namespace ClockIn_ClockOut
             if (time_record == null || time_record.Start_Time == default)
             {
                 time_record = TimeRecordsDAO.GetTimeRecordModel(employee.Employee_Id);
+                TipsLabel.Visible = false;
+                TipsBox.Visible = false;
             }
 
             if (time_record != null && time_record.Start_Time != default)
             {
                 ClockInTime.Text = time_record.Start_Time.ToString();
+                TipsLabel.Visible = true;
+                TipsBox.Visible = true;
+
             }
             EmployeeFullName.Text = $"{employee.First_Name} {employee.Last_Name}";
             EmployeeId.Text = employee.Employee_Id.ToString();
-            EmployeePay.Text = "$" + employee.Pay_Per_Hour.ToString();
             EmployeePosition.Text = employee.Position;
         }
 

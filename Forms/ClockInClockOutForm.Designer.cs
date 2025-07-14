@@ -38,11 +38,9 @@
             HeadingLabel = new Label();
             EmployeeIdLabel = new Label();
             PositionLabel = new Label();
-            PayLabel = new Label();
             EmployeeId = new Label();
             EmployeeFullName = new Label();
             EmployeePosition = new Label();
-            EmployeePay = new Label();
             ClockInTime = new Label();
             ClockOutTime = new Label();
             BackBtn = new Button();
@@ -50,7 +48,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(14, 225);
+            button1.Location = new Point(14, 189);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(79, 28);
@@ -61,7 +59,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(14, 328);
+            button2.Location = new Point(14, 292);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(79, 28);
@@ -74,7 +72,7 @@
             // 
             ClockInLabel.AutoSize = true;
             ClockInLabel.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ClockInLabel.Location = new Point(12, 203);
+            ClockInLabel.Location = new Point(12, 167);
             ClockInLabel.Name = "ClockInLabel";
             ClockInLabel.Size = new Size(95, 18);
             ClockInLabel.TabIndex = 6;
@@ -84,7 +82,7 @@
             // 
             ClockOutLabel.AutoSize = true;
             ClockOutLabel.Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            ClockOutLabel.Location = new Point(14, 304);
+            ClockOutLabel.Location = new Point(14, 268);
             ClockOutLabel.Name = "ClockOutLabel";
             ClockOutLabel.Size = new Size(106, 18);
             ClockOutLabel.TabIndex = 7;
@@ -93,7 +91,7 @@
             // TipsLabel
             // 
             TipsLabel.AutoSize = true;
-            TipsLabel.Location = new Point(39, 257);
+            TipsLabel.Location = new Point(37, 220);
             TipsLabel.Name = "TipsLabel";
             TipsLabel.Size = new Size(34, 18);
             TipsLabel.TabIndex = 11;
@@ -101,7 +99,7 @@
             // 
             // TipsBox
             // 
-            TipsBox.Location = new Point(16, 278);
+            TipsBox.Location = new Point(14, 241);
             TipsBox.Margin = new Padding(3, 4, 3, 4);
             TipsBox.Name = "TipsBox";
             TipsBox.Size = new Size(79, 23);
@@ -144,15 +142,6 @@
             PositionLabel.TabIndex = 16;
             PositionLabel.Text = "Position:";
             // 
-            // PayLabel
-            // 
-            PayLabel.AutoSize = true;
-            PayLabel.Location = new Point(9, 149);
-            PayLabel.Name = "PayLabel";
-            PayLabel.Size = new Size(94, 18);
-            PayLabel.TabIndex = 17;
-            PayLabel.Text = "Pay Per Hour:";
-            // 
             // EmployeeId
             // 
             EmployeeId.AutoSize = true;
@@ -180,19 +169,10 @@
             EmployeePosition.TabIndex = 20;
             EmployeePosition.Text = "label3";
             // 
-            // EmployeePay
-            // 
-            EmployeePay.AutoSize = true;
-            EmployeePay.Location = new Point(106, 149);
-            EmployeePay.Name = "EmployeePay";
-            EmployeePay.Size = new Size(45, 18);
-            EmployeePay.TabIndex = 21;
-            EmployeePay.Text = "label4";
-            // 
             // ClockInTime
             // 
             ClockInTime.AutoSize = true;
-            ClockInTime.Location = new Point(135, 203);
+            ClockInTime.Location = new Point(126, 167);
             ClockInTime.Name = "ClockInTime";
             ClockInTime.Size = new Size(0, 18);
             ClockInTime.TabIndex = 23;
@@ -200,14 +180,14 @@
             // ClockOutTime
             // 
             ClockOutTime.AutoSize = true;
-            ClockOutTime.Location = new Point(135, 304);
+            ClockOutTime.Location = new Point(126, 268);
             ClockOutTime.Name = "ClockOutTime";
             ClockOutTime.Size = new Size(0, 18);
             ClockOutTime.TabIndex = 24;
             // 
             // BackBtn
             // 
-            BackBtn.Location = new Point(9, 454);
+            BackBtn.Location = new Point(7, 424);
             BackBtn.Margin = new Padding(3, 4, 3, 4);
             BackBtn.Name = "BackBtn";
             BackBtn.Size = new Size(86, 28);
@@ -216,20 +196,18 @@
             BackBtn.UseVisualStyleBackColor = true;
             BackBtn.Click += BackBtn_Click;
             // 
-            // EmployeeInfoForm
+            // ClockInClockOutForm
             // 
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(355, 492);
+            ClientSize = new Size(355, 465);
             Controls.Add(BackBtn);
             Controls.Add(ClockOutTime);
             Controls.Add(ClockInTime);
-            Controls.Add(EmployeePay);
             Controls.Add(EmployeePosition);
             Controls.Add(EmployeeFullName);
             Controls.Add(EmployeeId);
-            Controls.Add(PayLabel);
             Controls.Add(PositionLabel);
             Controls.Add(EmployeeIdLabel);
             Controls.Add(HeadingLabel);
@@ -242,7 +220,7 @@
             Controls.Add(button1);
             Font = new Font("Inter", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "EmployeeInfoForm";
+            Name = "ClockInClockOutForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Employee Information & Clock in-Clock out";
             Load += Form1_Load;
@@ -262,11 +240,9 @@
         private Label HeadingLabel;
         private Label EmployeeIdLabel;
         private Label PositionLabel;
-        private Label PayLabel;
         private Label EmployeeId;
         private Label EmployeeFullName;
         private Label EmployeePosition;
-        private Label EmployeePay;
         private Label ClockInTime;
         private Label ClockOutTime;
         private Button BackBtn;

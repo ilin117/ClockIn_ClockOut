@@ -33,7 +33,11 @@ namespace ClockIn_ClockOut.Forms
             textBoxFirstName.Text = employee.First_Name;
             textBoxLastName.Text = employee.Last_Name;
             textBoxPosition.Text = employee.Position;
-            textBoxPayPerHour.Text = employee.Pay_Per_Hour.ToString();
+            textBoxPay.Text = employee.Pay_Per_Hour.ToString();
+            textBoxAddress.Text = employee.Address;
+            textBoxPhone.Text = employee.Phone_Number;
+            textBoxEmail.Text = employee.Email;
+            textBoxSSN.Text = employee.SSN;
         }
 
         private void backBtn_Click(object sender, EventArgs e)
@@ -47,11 +51,11 @@ namespace ClockIn_ClockOut.Forms
         private void updateBtn_Click(object sender, EventArgs e)
         {
 
-            if (!int.TryParse(textBoxEmployeeId.Text, out _) || !double.TryParse(textBoxPayPerHour.Text, out _) || string.IsNullOrEmpty(textBoxFirstName.Text) || string.IsNullOrEmpty(textBoxLastName.Text) || string.IsNullOrEmpty(textBoxPosition.Text))
+            if (!int.TryParse(textBoxEmployeeId.Text, out _) || !double.TryParse(textBoxPay.Text, out _) || string.IsNullOrEmpty(textBoxFirstName.Text) || string.IsNullOrEmpty(textBoxLastName.Text) || string.IsNullOrEmpty(textBoxPosition.Text))
             {
                 string errorMessage = "";
 
-                if (textBoxEmployeeId.Text == "" || textBoxPayPerHour.Text == "" || string.IsNullOrEmpty(textBoxFirstName.Text) || string.IsNullOrEmpty(textBoxLastName.Text) || string.IsNullOrEmpty(textBoxPosition.Text))
+                if (textBoxEmployeeId.Text == "" || textBoxPay.Text == "" || string.IsNullOrEmpty(textBoxFirstName.Text) || string.IsNullOrEmpty(textBoxLastName.Text) || string.IsNullOrEmpty(textBoxPosition.Text))
                 {
                     errorMessage += "Fields cannot be empty\n";
                 }
@@ -61,7 +65,7 @@ namespace ClockIn_ClockOut.Forms
                     errorMessage += "Please enter a numeric value for Employee ID\n";
                 }
 
-                if (!double.TryParse(textBoxPayPerHour.Text, out _))
+                if (!double.TryParse(textBoxPay.Text, out _))
                 {
                     errorMessage += "Please enter a numeric value for Pay";
                 }
@@ -74,7 +78,7 @@ namespace ClockIn_ClockOut.Forms
             employee.First_Name = AddEmployeeForm.CapitalizeFirstLetter(textBoxFirstName.Text);
             employee.Last_Name = AddEmployeeForm.CapitalizeFirstLetter(textBoxLastName.Text);
             employee.Position = AddEmployeeForm.CapitalizeFirstLetter(textBoxPosition.Text);
-            employee.Pay_Per_Hour = double.Parse(textBoxPayPerHour.Text);
+            employee.Pay_Per_Hour = double.Parse(textBoxPay.Text);
 
             try
             {

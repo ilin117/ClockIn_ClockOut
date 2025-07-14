@@ -1,6 +1,6 @@
 ﻿namespace ClockIn_ClockOut.Forms
 {
-    partial class ViewRecordForm
+    partial class EditRecordForm
     {
         /// <summary>
         /// Required designer variable.

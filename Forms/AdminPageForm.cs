@@ -95,7 +95,7 @@ namespace ClockIn_ClockOut.Forms
             {
                 PayrollModel employee = (PayrollModel)TimeRecordsFromDate.SelectedItem;
                 this.Hide();
-                var form = new ViewRecordForm(employee);
+                var form = new EditRecordForm(employee);
                 form.Closed += (s, args) => this.Close();
                 form.Show();
             }
@@ -104,7 +104,7 @@ namespace ClockIn_ClockOut.Forms
         private void editBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new EmployeeEditSelectForm();
+            var form = new AdminSelectForm();
             form.Closed += (s, args) => this.Close();
             form.Show();
         }

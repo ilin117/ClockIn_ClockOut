@@ -12,15 +12,15 @@ using System.Windows.Forms;
 
 namespace ClockIn_ClockOut.Forms
 {
-    public partial class ViewRecordForm : Form
+    public partial class EditRecordForm : Form
     {
         PayrollModel payroll_record;
-        public ViewRecordForm()
+        public EditRecordForm()
         {
             InitializeComponent();
         }
 
-        public ViewRecordForm(PayrollModel payroll_record)
+        public EditRecordForm(PayrollModel payroll_record)
         {
             InitializeComponent();
             this.payroll_record = payroll_record;

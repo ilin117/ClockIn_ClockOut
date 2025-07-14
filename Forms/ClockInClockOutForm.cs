@@ -4,16 +4,16 @@ using ClockIn_ClockOut.Models;
 
 namespace ClockIn_ClockOut
 {
-    public partial class EmployeeInfoForm : Form
+    public partial class ClockInClockOutForm : Form
     {
         TimeRecordModel time_record;
         EmployeeModel employee;
-        public EmployeeInfoForm()
+        public ClockInClockOutForm()
         {
             InitializeComponent();
         }
 
-        public EmployeeInfoForm(EmployeeModel employee)
+        public ClockInClockOutForm(EmployeeModel employee)
         {
             InitializeComponent();
             this.employee = employee;

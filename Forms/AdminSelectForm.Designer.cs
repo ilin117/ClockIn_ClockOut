@@ -1,6 +1,6 @@
 ﻿namespace ClockIn_ClockOut.Forms
 {
-    partial class EmployeeEditSelectForm
+    partial class AdminSelectForm
     {
         /// <summary>
         /// Required designer variable.

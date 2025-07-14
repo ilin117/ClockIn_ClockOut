@@ -178,7 +178,7 @@
             TimeRecordsFromDate.Location = new Point(12, 195);
             TimeRecordsFromDate.Name = "TimeRecordsFromDate";
             TimeRecordsFromDate.Size = new Size(889, 256);
-            TimeRecordsFromDate.TabIndex = 1;
+            TimeRecordsFromDate.TabIndex = 111;
             TimeRecordsFromDate.DoubleClick += TimeRecordsFromDate_DoubleClick;
             // 
             // textBoxName

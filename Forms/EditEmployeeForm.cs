@@ -39,7 +39,7 @@ namespace ClockIn_ClockOut.Forms
         private void backBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            var form = new EmployeeEditSelectForm();
+            var form = new AdminSelectForm();
             form.Closed += (s, args) => this.Close();
             form.Show();
         }
@@ -81,7 +81,7 @@ namespace ClockIn_ClockOut.Forms
                 EmployeesDAO.updateEmployeeInfo(employee);
                 MessageBox.Show("Employee information updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                var form = new EmployeeEditSelectForm();
+                var form = new AdminSelectForm();
                 form.Closed += (s, args) => this.Close();
                 form.Show();
             }
@@ -100,7 +100,7 @@ namespace ClockIn_ClockOut.Forms
                 MessageBox.Show($"Information removed for {employee.First_Name} {employee.Last_Name} with id: {employee.Employee_Id}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 EmployeesDAO.removeEmployee(employee);
                 this.Hide();
-                var form = new EmployeeEditSelectForm();
+                var form = new AdminSelectForm();
                 form.Closed += (s, args) => this.Close();
                 form.Show();
             }

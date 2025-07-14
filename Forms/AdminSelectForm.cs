@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ClockIn_ClockOut.Forms
 {
-    public partial class EmployeeEditSelectForm : Form
+    public partial class AdminSelectForm : Form
     {
-        public EmployeeEditSelectForm()
+        public AdminSelectForm()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace ClockIn_ClockOut
 {
-    partial class EmployeeInfoForm
+    partial class ClockInClockOutForm
     {
         /// <summary>
         ///  Required designer variable.
